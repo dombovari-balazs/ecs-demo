@@ -20,3 +20,47 @@ python -m pytest tests
 
 
 (by default, running only "pytest" should work.)
+
+
+## Guides
+
+Terraform setup
+
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+
+
+Terraform with ECS Fargate 
+
+https://github.com/terraform-aws-modules/terraform-aws-ecs/tree/master/examples/fargate
+
+
+Docker in docker? 
+
+https://www.reddit.com/r/docker/comments/1ahizyj/devcontainers_docker_in_docker_or_docker_outside/
+
+
+
+Connect Github Actions to AWS
+
+--> seems like OpenID connector is the GoTo solution
+
+https://medium.com/@alissonpdc/github-actions-how-to-authenticate-on-aws-cloud-14185f811bf0
+https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/
+https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws
+
+
+Connect ECS with other services
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/networking-connecting-vpc.html
+---> seems like a VPC challange
+
+
+az kom gec
+https://github.com/actions/starter-workflows/blob/main/deployments/aws.yml
+https://github.com/actions/starter-workflows/blob/main/deployments/terraform.yml
+
+
+## Questions
+- Do we want to be able to directly push images to ECR from our local machine?
+In the first run, let's just focus on solving 1 problem at once. Later this option could add value and reduce development cycle.
+Also helps quick fixes, however adds security risks as well.
+
